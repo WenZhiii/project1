@@ -1,10 +1,6 @@
-name: C/C++ CI
+name: C/C++ Build and Run
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -18,7 +14,7 @@ jobs:
       run: sudo apt-get install build-essential -y
 
     - name: Build
-      run: gcc -o hello hello.c
+      run: g++ -o hello hello.cpp -lstdc++
 
     - name: Run
       run: ./hello
