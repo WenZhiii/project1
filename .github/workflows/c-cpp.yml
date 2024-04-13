@@ -18,7 +18,7 @@ jobs:
       run: sudo apt-get install build-essential -y
 
     - name: Build
-      run: gcc -o hello hello.c
+      run: gcc -o hello hello.cpp
 
     - name: Run
       run: ./hello
