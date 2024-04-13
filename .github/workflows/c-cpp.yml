@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Check out repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@main
 
     - name: Install build essentials
       run: sudo apt-get install build-essential -y
